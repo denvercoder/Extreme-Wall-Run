@@ -78,16 +78,10 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
             addScore()
         }
             
-            
-            
         else if nodeA.physicsBody?.categoryBitMask == bodyNames.Person && nodeB.physicsBody?.categoryBitMask == bodyNames.Coin{
             nodeB.removeFromParentNode()
             addScore()
-            
         }
-        
-        
-        
         
     }
     func updateLabel(){
@@ -95,7 +89,6 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
         highscoreLabel.text = "Highscore : \(highscore)"
         
     }
-    
     
     func addScore(){
         score += 1
@@ -112,10 +105,6 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
         }
         
     }
-    
-    
-    
-    
     
     func fadeIn(node : SCNNode){
         
@@ -162,11 +151,8 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
             
             if (deleteBox?.position.x)! > person.position.x + 1 || (deleteBox?.position.z)! > person.position.z + 1{
                 
-                
                 prevBoxNumber += 1
-                
                 fadeOut(node: deleteBox!)
-                
                 createBox()
                 
             }
