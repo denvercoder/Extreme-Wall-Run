@@ -114,7 +114,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
     }
     func createCoin(box : SCNNode){
         scene.physicsWorld.gravity = SCNVector3Make(0, 0, 0)
-        let spin = SCNAction.rotate(by: CGFloat(M_PI * 2), around: SCNVector3Make(0, 0.5 , 0) , duration: 0.5)
+        let spin = SCNAction.rotate(by: CGFloat(Double.pi * 2), around: SCNVector3Make(0, 0.5 , 0) , duration: 0.5)
         let randomNumber = arc4random() % 8
         if randomNumber == 3{
             let coinScene = SCNScene(named: "coin.dae")
